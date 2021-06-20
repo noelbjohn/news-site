@@ -27,7 +27,7 @@ const News = ({ userDetails, setUser, setLoading }) => {
   const getAndSetArticles = async (limit) => {
     setLoading(true);
     try {
-      const params = { 'api-key': REACT_APP_API_KEY, offset: page };
+      const params = { 'api-key': REACT_APP_API_KEY, offset: page * 10 };
       if (limit) {
         params.limit = limit;
       }
